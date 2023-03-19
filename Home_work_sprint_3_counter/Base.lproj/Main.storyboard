@@ -1,24 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Home_work_sprint_3_counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQG-4M-EfB">
+                                <rect key="frame" x="15" y="139" width="176.66666666666666" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qYT-fP-Xx0"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="plusDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DQ8-dz-LEQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aS-Cn-sA0">
+                                <rect key="frame" x="201.66666666666663" y="139" width="176.33333333333337" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Cw6-Jk-3tK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="minus" catalog="system"/>
+                                <connections>
+                                    <action selector="minusDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5b-BY-2vA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evl-fe-J6U">
+                                <rect key="frame" x="15" y="197" width="363" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HS8-jf-Tw2"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="refreshDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="93v-TN-6IA"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6s-0m-kAm">
+                                <rect key="frame" x="15" y="262" width="363" height="575"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYp-Cq-2Ho">
+                                <rect key="frame" x="15" y="74" width="363" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GjK-W4-ghH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gYp-Cq-2Ho" secondAttribute="trailing" constant="15" id="EDM-v1-xfB"/>
+                            <constraint firstItem="zQG-4M-EfB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="EDV-f8-pJ5"/>
+                            <constraint firstItem="7aS-Cn-sA0" firstAttribute="top" secondItem="gYp-Cq-2Ho" secondAttribute="bottom" constant="15" id="F1w-Jx-Gtj"/>
+                            <constraint firstItem="n6s-0m-kAm" firstAttribute="top" secondItem="evl-fe-J6U" secondAttribute="bottom" constant="15" id="FBQ-Gy-1Oc"/>
+                            <constraint firstItem="evl-fe-J6U" firstAttribute="top" secondItem="zQG-4M-EfB" secondAttribute="bottom" constant="8" symbolic="YES" id="Fsn-05-PmH"/>
+                            <constraint firstAttribute="bottom" secondItem="n6s-0m-kAm" secondAttribute="bottom" constant="15" id="Gr1-9J-ehf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7aS-Cn-sA0" secondAttribute="trailing" constant="15" id="IAZ-Sm-z6F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="evl-fe-J6U" secondAttribute="trailing" constant="15" id="JSY-ss-NzE"/>
+                            <constraint firstItem="7aS-Cn-sA0" firstAttribute="width" secondItem="zQG-4M-EfB" secondAttribute="width" id="M1a-3g-s3D"/>
+                            <constraint firstItem="7aS-Cn-sA0" firstAttribute="leading" secondItem="zQG-4M-EfB" secondAttribute="trailing" constant="10" id="OHy-TX-FSG"/>
+                            <constraint firstItem="n6s-0m-kAm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Z7m-vq-xXS"/>
+                            <constraint firstItem="gYp-Cq-2Ho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="b6B-SY-beY"/>
+                            <constraint firstAttribute="trailing" secondItem="7aS-Cn-sA0" secondAttribute="trailing" constant="15" id="bo1-75-Q31"/>
+                            <constraint firstItem="evl-fe-J6U" firstAttribute="top" secondItem="zQG-4M-EfB" secondAttribute="bottom" constant="8" symbolic="YES" id="enw-8R-r8y"/>
+                            <constraint firstItem="evl-fe-J6U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="fx5-H3-kFO"/>
+                            <constraint firstItem="gYp-Cq-2Ho" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="gmd-SD-8As"/>
+                            <constraint firstItem="zQG-4M-EfB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="j3m-Hv-cvP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n6s-0m-kAm" secondAttribute="trailing" constant="15" id="lVi-nX-vCl"/>
+                            <constraint firstItem="zQG-4M-EfB" firstAttribute="top" secondItem="gYp-Cq-2Ho" secondAttribute="bottom" constant="15" id="mY7-wS-19d"/>
+                            <constraint firstItem="n6s-0m-kAm" firstAttribute="top" secondItem="evl-fe-J6U" secondAttribute="bottom" constant="15" id="xlP-XV-ZUl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="gYp-Cq-2Ho" id="v3L-MR-l7x"/>
+                        <outlet property="logTextView" destination="n6s-0m-kAm" id="iWH-9r-X9j"/>
+                        <outlet property="minusButton" destination="7aS-Cn-sA0" id="Mcz-mV-F65"/>
+                        <outlet property="plusButton" destination="zQG-4M-EfB" id="neL-wr-07g"/>
+                        <outlet property="refreshButton" destination="evl-fe-J6U" id="XEf-bX-NjO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="102" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
