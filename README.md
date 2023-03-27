@@ -1,4 +1,4 @@
-# Home_work_sprint_3_counter
+# Advanced counter
 Advanced counter with (add, subtract and reset to zero original) functions and history log
 ________________________________
 
